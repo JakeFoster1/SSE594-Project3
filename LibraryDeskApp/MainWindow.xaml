@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryDeskApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <DataGrid ItemsSource="{Binding LibraryBooks}"></DataGrid>
-    </Grid>
+        Title="Library Database App" Height="450" Width="800">
+    <Border Margin="0,0,0,1">
+        <StackPanel>
+            <TextBlock Name="TextBlock1" Height="50" Width="600"  
+                Text="What function would you like to perform?"  
+                Margin="10,10,0,0" VerticalAlignment="Top"  
+                HorizontalAlignment="Center" TextAlignment="Center"
+                       FontSize="30">
+            </TextBlock>
+            <Grid>
+                <!--<DataGrid ItemsSource="{Binding LibraryBooks}"></DataGrid>-->
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Button FontSize="20" Margin="20 5 20 5" Grid.Column="0" Grid.Row="0" Content="Add a Book"/>
+                <Button FontSize="20" Margin="20 5 20 5" Grid.Column="1" Grid.Row="0" Content="Perform a Search"/>
+            </Grid>
+            <Image Width="300" Height="290" Margin="10,10,10,10" Source="/images/DeezBooks.png"/>
+        </StackPanel>
+    </Border>
 </Window>
