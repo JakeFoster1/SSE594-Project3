@@ -1,5 +1,4 @@
-﻿using LibraryBookDeskApp.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,25 +16,13 @@ using System.Windows.Shapes;
 namespace LibraryDeskApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AddBook.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddBook : Window
     {
-        public MainWindow()
+        public AddBook()
         {
             InitializeComponent();
-            this.DataContext = new LibraryViewModel();
-        }
-
-        private void Search(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Add_Entry(object sender, RoutedEventArgs e)
-        {
-            var nextPage = new AddBook();
-            nextPage.Show();
         }
     }
 }

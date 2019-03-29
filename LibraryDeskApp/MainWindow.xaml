@@ -9,10 +9,10 @@
     <Border Margin="0,0,0,1">
         <StackPanel>
             <TextBlock Name="TextBlock1" Height="50" Width="600"  
-                Text="What function would you like to perform?"  
+                Text="Which function would you like to perform?"  
                 Margin="10,10,0,0" VerticalAlignment="Top"  
                 HorizontalAlignment="Center" TextAlignment="Center"
-                       FontSize="30">
+                FontSize="30">
             </TextBlock>
             <Grid>
                 <!--<DataGrid ItemsSource="{Binding LibraryBooks}"></DataGrid>-->
@@ -24,8 +24,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
-                <Button FontSize="20" Margin="20 5 20 5" Grid.Column="0" Grid.Row="0" Content="Add a Book"/>
-                <Button FontSize="20" Margin="20 5 20 5" Grid.Column="1" Grid.Row="0" Content="Perform a Search"/>
+                <Button FontSize="20" Margin="20 5 20 5" Grid.Column="0" Grid.Row="0" Content="Add a Book" Click="Add_Entry"/>
+                <Button FontSize="20" Margin="20 5 20 5" Grid.Column="1" Grid.Row="0" Content="Perform a Search" Click="Search"/>
             </Grid>
             <Image Width="300" Height="290" Margin="10,10,10,10" Source="/images/DeezBooks.png"/>
         </StackPanel>
