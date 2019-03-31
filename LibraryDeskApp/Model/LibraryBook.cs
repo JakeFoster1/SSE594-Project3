@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace LibraryBookDeskApp.Model
         public string Author                   { get; set; }
         public string Publisher                { get; set; }
         public DateTime DatePublished          { get; set; }
+        //[ForeignKey("Library")]
         public IList<Library> InStockLocations { get; set; }
     }
 }
