@@ -29,7 +29,8 @@ namespace LibraryDeskApp
 
         private void Search(object sender, RoutedEventArgs e)
         {
-
+            var nextPage = new performSearch();
+            nextPage.Show();
         }
 
         private void Add_Entry(object sender, RoutedEventArgs e)

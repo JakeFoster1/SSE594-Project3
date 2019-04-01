@@ -70,6 +70,9 @@
       <DependentUpon>201903272229574_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="performSearch.xaml.cs">
+      <DependentUpon>performSearch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\LibraryViewModel.cs" />
     <Page Include="AddBook.xaml">
       <SubType>Designer</SubType>
@@ -87,6 +90,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="performSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Library.cs" />
