@@ -32,6 +32,23 @@ namespace LibraryDeskApp
 
             var query = from books in db.LibraryBook select books;
             var array = query.ToArray();
+            var nextWindow = new Results(array);
+            nextWindow.Show();
+        }
+
+        private void Btn_search_by_author_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_search_by_title_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_search_by_location_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
