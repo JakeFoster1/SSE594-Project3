@@ -38,17 +38,20 @@ namespace LibraryDeskApp
 
         private void Btn_search_by_author_Click(object sender, RoutedEventArgs e)
         {
-
+            var nextWindow = new SearchByAuthor();
+            nextWindow.Show();
         }
 
         private void Btn_search_by_title_Click(object sender, RoutedEventArgs e)
         {
-
+            var nextWindow = new SearchByTitle();
+            nextWindow.Show();
         }
 
         private void Btn_search_by_location_Click(object sender, RoutedEventArgs e)
         {
-
+            var nextWindow = new SearchByLocation();
+            nextWindow.Show();
         }
     }
 }

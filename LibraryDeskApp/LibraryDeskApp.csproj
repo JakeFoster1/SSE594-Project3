@@ -76,6 +76,15 @@
     <Compile Include="Results.xaml.cs">
       <DependentUpon>Results.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SearchByAuthor.xaml.cs">
+      <DependentUpon>SearchByAuthor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchByLocation.xaml.cs">
+      <DependentUpon>SearchByLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchByTitle.xaml.cs">
+      <DependentUpon>SearchByTitle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\LibraryViewModel.cs" />
     <Page Include="AddBook.xaml">
       <SubType>Designer</SubType>
@@ -98,6 +107,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Results.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchByAuthor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchByLocation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchByTitle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
