@@ -30,10 +30,25 @@ namespace LibraryDeskApp
             string Location = tb_Location.Text;
             MyLibraryDb db = new MyLibraryDb();
             Library temp = new Library();
-            temp.Name = Location;
-            var query = from book in db.LibraryBook where book.InStockLocations.Contains(temp) select book;
+            
+            var query = from book in db.LibraryBook select book;
             var array = query.ToArray();
-            var nextWindow = new Results(array);
+            List<LibraryBook> resultList = new List<LibraryBook>();
+            foreach(var x in array)
+            {
+                if(x.InStockLocations != null)
+                {
+                    foreach (var location in x.InStockLocations)
+                    {
+                        if (location.Name.Contains(Location))
+                        {
+                            resultList.Add(x);
+                        }
+                    }
+                }
+               
+            }
+            var nextWindow = new Results(resultList.ToArray());
             nextWindow.Show();
         }
     }
