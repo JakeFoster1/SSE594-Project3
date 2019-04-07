@@ -1,0 +1,31 @@
+﻿<Window x:Class="LibraryDeskApp.performSearch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryDeskApp"
+        mc:Ignorable="d"
+        Title="performSearch" Height="450" Width="300">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+                    
+                <TextBlock Grid.Row="0" Name="tb_title" Text="Book Search"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"></TextBlock>
+                <Button Grid.Row="1" Name="btn_showAll"  Content="Show All Books" Click="Btn_Get_All_Books" FontSize="20" ></Button>
+        <Button Grid.Row="2" Name="btn_search_by_author" Content="Search by Author" Click="Btn_search_by_author_Click" FontSize="20"></Button>
+        <Button Grid.Row="3" Name="btn_search_by_title" Content="Search by Title" Click="Btn_search_by_title_Click" FontSize="20"></Button>
+        <Button Grid.Row="4" Name="btn_search_by_location" Content="Search by Location" Click="Btn_search_by_location_Click" FontSize="20"></Button>
+
+
+
+    </Grid>
+</Window>

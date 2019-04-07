@@ -1,0 +1,19 @@
+﻿<Window x:Class="LibraryDeskApp.SearchByLocation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryDeskApp"
+        mc:Ignorable="d"
+        Title="SearchByLocation" Height="450" Width="300">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Search by Location" HorizontalAlignment="Center" FontSize="30"/>
+            <WrapPanel>
+                <TextBlock Text="Location: " />
+                <TextBox Name="tb_Location" Width="200"/>
+                <Button Name="btn_search" Content="Search" Click="Btn_Search" />
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Window>

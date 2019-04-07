@@ -1,4 +1,4 @@
-﻿using LibraryBookDeskApp.ViewModel;
+﻿using LibraryBookDeskApp.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,32 +11,29 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace LibraryDeskApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SearchByAuthor.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SearchByAuthor : Window
     {
-        public MainWindow()
+        public SearchByAuthor()
         {
             InitializeComponent();
-            this.DataContext = new LibraryViewModel();
         }
 
         private void Search(object sender, RoutedEventArgs e)
         {
-            var nextPage = new performSearch();
-            nextPage.Show();
-        }
-
-        private void Add_Entry(object sender, RoutedEventArgs e)
-        {
-            var nextPage = new AddBook();
-            nextPage.Show();
+            MyLibraryDb db = new MyLibraryDb();
+            string AuthorName = tb_Author.Text;
+            var query = from book in db.LibraryBook where book.Author.Contains(AuthorName) select book;
+            var array = query.ToArray();
+            var nextWindow = new Results(array);
+            nextWindow.Show();
+            
         }
     }
 }
